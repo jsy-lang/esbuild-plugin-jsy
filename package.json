@@ -1,0 +1,39 @@
+{
+  "name": "esbuild-plugin-jsy",
+  "version": "0.0.1",
+  "description": "ESBuild JSY syntax transpiler to standard JavaScript",
+  "license": "MIT",
+  "author": "Shane Holloway",
+  "homepage": "https://github.com/jsy-lang/esbuild-plugin-jsy#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsy-lang/esbuild-plugin-jsy.git"
+  },
+  "keywords": [
+    "esbuild",
+    "esbuild-plugin",
+    "JSY"
+  ],
+  "files": [
+    "cjs",
+    "esm"
+  ],
+  "module": "./esm/esbuild-plugin-jsy.js",
+  "main": "./cjs/esbuild-plugin-jsy.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "esbuild-plugin-jsy": "file:.",
+    "esbuild": "^0.13.8",
+    "jsy-transpile": "^0.9.5",
+    "rollup": "^2.56.3"
+  },
+  "scripts": {
+    "clean": "rm -rf esm/ cjs/",
+    "build": "rollup --config",
+    "watch": "npm -s run build -- --watch",
+    "prepublishOnly": "npm -s run test",
+    "pretest": "npm -s run build",
+    "test": "true"
+  }
+}

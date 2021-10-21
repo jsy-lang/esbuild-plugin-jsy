@@ -1,0 +1,3 @@
+console.log @:
+  msg: "HELLO ESBuild!"
+  date: new Date().toISOString()
